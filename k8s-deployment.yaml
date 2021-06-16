@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bootdemo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bootdemo
+  template:
+    metadata:
+      labels:
+        app: bootdemo
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+        - name: bootdemo
+          image: dockr.jfrog.io/mido-docker/bootdemo:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
