@@ -32,4 +32,7 @@ basic hello world spring boot application - curl {EXTERNAL-IP}:8080/hello
      - skaffold build
      - skaffold deploy -i dockr.jfrog.io/mido-docker/bootdemo:latest
      - skaffold dev - for rolling deployments
- 
+     - skaffold run --tail 
+     
+     ref:
+	https://skaffold.dev/
