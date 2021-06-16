@@ -9,7 +9,9 @@ basic hello world spring boot application - curl {EXTERNAL-IP}:8080/hello
   
   ref
     - https://jfrog.com/blog/how-to-set-up-a-private-remote-and-virtual-docker-registry/
+    
     - https://jfrog.com/screencast/artifactory-5-one-minute-setup-docker-registry-as-container-install/
+    
     - https://www.jfrog.com/confluence/display/JFROG/Getting+Started+with+Artifactory+as+a+Docker+Registry
     
 2. image pull secrets config
