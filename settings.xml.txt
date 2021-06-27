@@ -1,0 +1,9 @@
+<settings>
+   <servers>
+    <server>
+      <id>dockr.jfrog.io</id>
+      <username>midoshkm@gmail.com</username>
+      <password>Jfrog@123</password>
+    </server>
+  </servers>
+</settings>

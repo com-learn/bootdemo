@@ -11,4 +11,4 @@ spec:
       protocol: TCP
   selector:
     app: bootdemo
-  type: LoadBalancer
+#  type: LoadBalancer

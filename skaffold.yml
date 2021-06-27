@@ -3,8 +3,10 @@ kind: Config
 build:
   artifacts:
     - image: dockr.jfrog.io/mido-docker/bootdemo
-      jib: {}
-
+      #jib: {}
+      custom:
+        buildCommand: mvn compile jib:build
+  local: {}
 deploy:
   kubectl:
     manifests:
