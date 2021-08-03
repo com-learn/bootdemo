@@ -34,7 +34,7 @@ public class ProductExceptionHandler extends ResponseEntityExceptionHandler {
 
         return new ResponseEntity<>
         (ex.getConstraintViolations().stream().
-        map(e -> String.format(" path : %s , message : %s",e.getPropertyPath() e.getMessage()))
+        map(e -> String.format(" path : %s , message : %s",e.getPropertyPath(), e.getMessage()))
         .collect(Collectors.toList()),HttpStatus.BAD_REQUEST);
 
     }
