@@ -13,7 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.validation.annotation.Validated;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,9 +21,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import io.swagger.v3.oas.annotations.Operation;
-
+import lombok.extern.slf4j.Slf4j;
 @Controller
-@Validated
+@Slf4j
 @RequestMapping("/api/bootdemo")
 public class ProductController {
     
@@ -33,12 +33,14 @@ public class ProductController {
     @GetMapping("/products")
     @Operation( summary = "List All Products")
     public ResponseEntity<List<Product>> getAllProducts() {
+        log.info("Entering get All products method");
         return new ResponseEntity<>(productService.getAllProducts(),HttpStatus.OK);
     }
 
     @GetMapping("/products/{id}")
     @Operation( summary = "Get a Product")
     public ResponseEntity<Product> getProduct(@PathVariable @Positive Long id) throws ResourceNotFoundException {
+        log.info("Entering get a product method with id {}", id);
         return new ResponseEntity<>(productService.getProductById(id),HttpStatus.OK);
     }
 
