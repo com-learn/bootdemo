@@ -100,13 +100,13 @@
 					<from>
 						<image>arm64v8/openjdk:11-jre-slim</image>
 						<auth>
-							<username>midoshkm@hotmail.com</username>
+							<username>midoshkm</username>
 						</auth>
 					</from>
 					<to>
 						<image>midoshkm/bootdemo:latest</image>
 						<auth>
-							<username>midoshkm@hotmail.com</username>
+							<username>midoshkm</username>
 						</auth>
 					</to>
 				</configuration>

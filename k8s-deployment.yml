@@ -16,11 +16,7 @@ spec:
         - name: regcred
       containers:
         - name: bootdemo
-          image: dockr.jfrog.io/mido-docker/bootdemo:latest
+          image: midoshkm/bootdemo:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
-        - name: logstash
-          image: logstash:7.14.0
-          ports:
-            - containerPort: 9600
